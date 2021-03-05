@@ -44,7 +44,7 @@ contract Ballot {
         
     }
 
-    function winningProposal() public constant returns (uint8 _winningProposal) {
+    function winningProposal() public constant returns (uint8) {
        if(stage != Stage.Done) {return;}
         uint256 winningVoteCount = 0;
         for (uint8 prop = 0; prop < proposals.length; prop++)

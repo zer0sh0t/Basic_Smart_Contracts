@@ -50,7 +50,7 @@ contract Ballot {
         
     }
 
-    function winningProposal() public validStage(Stage.Done) constant returns (uint8 _winningProposal) {
+    function winningProposal() public validStage(Stage.Done) constant returns (uint8) {
        //if(stage != Stage.Done) {return;}
         uint256 winningVoteCount = 0;
         for (uint8 prop = 0; prop < proposals.length; prop++)
@@ -58,7 +58,7 @@ contract Ballot {
                 winningVoteCount = proposals[prop].voteCount;
                 _winningProposal = prop;
             }
-        return _winningProposal;
         assert (winningVoteCount > 0);
+        return _winningProposal;
     }
 }

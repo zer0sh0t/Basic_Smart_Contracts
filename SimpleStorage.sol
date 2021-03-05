@@ -21,7 +21,3 @@ contract SimpleStorage {
         return;
     }
 }
-
- 
-
-
